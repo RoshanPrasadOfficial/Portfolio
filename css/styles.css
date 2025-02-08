@@ -38,9 +38,17 @@ body {
 .hero h1 {
     margin-bottom: 1rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10px;
+}
+
+.hero h1 .greeting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
 }
 
 .wave-hand {
