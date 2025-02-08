@@ -10,12 +10,14 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     transition: background-color var(--transition-speed);
+    padding-top: 60px; /* Reduced from 120px */
 }
 
 /* Navigation */
 .navbar {
     backdrop-filter: blur(10px);
     transition: all var(--transition-speed);
+    padding: 0.5rem 0;
 }
 
 .navbar-brand {
@@ -25,15 +27,13 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 120px 0 60px;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+    padding: 40px 0; /* Reduced from 120px */
+    min-height: auto; /* Removed 100vh */
 }
 
 .profile-img {
     width: 100%;
-    max-width: 400px;
+    max-width: 300px; /* Reduced from 400px */
     border-radius: 50%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: transform var(--transition-speed);
@@ -45,11 +45,11 @@ body {
 
 /* Sections */
 .section {
-    padding: 80px 0;
+    padding: 40px 0; /* Reduced from 80px */
 }
 
 h2 {
-    margin-bottom: 40px;
+    margin-bottom: 30px; /* Reduced from 40px */
     text-align: center;
     position: relative;
 }
@@ -60,19 +60,19 @@ h2::after {
     width: 50px;
     height: 3px;
     background: var(--bs-primary);
-    margin: 20px auto;
+    margin: 15px auto; /* Reduced from 20px */
 }
 
 /* Skills */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 30px;
+    gap: 20px; /* Reduced from 30px */
     text-align: center;
 }
 
 .skill-item {
-    padding: 20px;
+    padding: 15px; /* Reduced from 20px */
     border-radius: 10px;
     transition: transform var(--transition-speed);
 }
@@ -82,15 +82,15 @@ h2::after {
 }
 
 .skill-item i {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 2rem; /* Reduced from 2.5rem */
+    margin-bottom: 8px; /* Reduced from 10px */
 }
 
 /* Projects */
 .project-card {
     border-radius: 10px;
     overflow: hidden;
-    margin-bottom: 30px;
+    margin-bottom: 20px; /* Reduced from 30px */
     transition: transform var(--transition-speed);
 }
 
@@ -100,39 +100,39 @@ h2::after {
 
 .project-card img {
     width: 100%;
-    height: 200px;
+    height: 160px; /* Reduced from 200px */
     object-fit: cover;
 }
 
 .project-card h3 {
-    font-size: 1.2rem;
-    margin: 15px;
+    font-size: 1.1rem; /* Reduced from 1.2rem */
+    margin: 12px; /* Reduced from 15px */
 }
 
 .project-card p {
     font-size: 0.9rem;
-    margin: 0 15px 15px;
+    margin: 0 12px 12px; /* Reduced from 15px */
 }
 
 /* Contact Form */
 .contact-form {
-    max-width: 600px;
+    max-width: 500px; /* Reduced from 600px */
     margin: 0 auto;
 }
 
 /* Footer */
 .footer {
-    padding: 40px 0;
+    padding: 30px 0; /* Reduced from 40px */
     text-align: center;
 }
 
 .social-links {
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Reduced from 20px */
 }
 
 .social-link {
-    font-size: 1.5rem;
-    margin: 0 10px;
+    font-size: 1.3rem; /* Reduced from 1.5rem */
+    margin: 0 8px; /* Reduced from 10px */
     transition: color var(--transition-speed);
 }
 
@@ -150,11 +150,12 @@ h2::after {
 @media (max-width: 768px) {
     .hero {
         text-align: center;
-        padding: 100px 0 40px;
+        padding: 20px 0; /* Reduced from 40px */
     }
 
     .profile-img {
-        margin-top: 40px;
+        margin-top: 30px; /* Reduced from 40px */
+        max-width: 250px; /* Reduced from 300px */
     }
 
     .skills-grid {
