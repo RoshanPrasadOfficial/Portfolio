@@ -108,37 +108,14 @@ h2::after {
 }
 
 .skill-progress {
-    width: 100%;
-    background-color: rgba(var(--bs-dark-rgb), 0.1);
-    border-radius: 10px;
-    margin-top: 10px;
-    overflow: hidden;
-}
-
-.progress-bar {
-    width: 0;
-    height: 10px;
-    background-color: var(--bs-primary);
-    border-radius: 10px;
-    transition: width 1s ease-in-out;
-    position: relative;
+    display: none;
 }
 
 .progress-text {
-    position: absolute;
-    right: 5px;
-    top: -20px;
-    font-size: 0.8rem;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.progress-bar {
-    width: var(--progress);
-}
-
-.progress-text {
-    opacity: 1;
+    display: block;
+    font-size: 1rem;
+    margin-top: 5px;
+    color: var(--bs-primary);
 }
 
 /* Projects */
