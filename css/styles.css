@@ -368,8 +368,8 @@ h2::after {
 
 .about-image .profile-img {
     width: 100%;
-    max-width: 450px;
-    border-radius: 15px;
+    max-width: 550px;
+    border-radius: 8px;
     border: 3px solid var(--bs-primary);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 
                 0 0 0 8px rgba(var(--bs-primary-rgb), 0.1);
