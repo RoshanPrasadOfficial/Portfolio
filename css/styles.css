@@ -379,6 +379,16 @@ body.dark-mode {
     background-color: rgba(33, 37, 41, 0.9);
 }
 
+.dark-mode .navbar-nav .nav-link,
+.dark-mode .navbar-brand {
+    color: #ffffff;
+}
+
+.dark-mode .navbar-nav .nav-link:hover,
+.dark-mode .navbar-brand:hover {
+    color: var(--bs-primary);
+}
+
 .dark-mode .project-card {
     background-color: var(--bs-dark);
 }
