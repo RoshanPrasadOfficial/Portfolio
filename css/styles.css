@@ -145,7 +145,7 @@ h2::after {
 .project-card {
     border-radius: 10px;
     overflow: hidden;
-    margin-bottom: 20px; /* Reduced from 30px */
+    margin-bottom: 25px;
     transition: transform var(--transition-speed);
 }
 
