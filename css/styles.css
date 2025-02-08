@@ -75,6 +75,7 @@ h2::after {
     padding: 15px; /* Reduced from 20px */
     border-radius: 10px;
     transition: transform var(--transition-speed);
+    background-color: rgba(var(--bs-primary-rgb), 0.1);
 }
 
 .skill-item:hover {
@@ -84,6 +85,41 @@ h2::after {
 .skill-item i {
     font-size: 2rem; /* Reduced from 2.5rem */
     margin-bottom: 8px; /* Reduced from 10px */
+    color: var(--bs-primary);
+}
+
+.skill-progress {
+    width: 100%;
+    background-color: rgba(var(--bs-dark-rgb), 0.1);
+    border-radius: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0;
+    height: 10px;
+    background-color: var(--bs-primary);
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+    position: relative;
+}
+
+.progress-text {
+    position: absolute;
+    right: 5px;
+    top: -20px;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.skill-item:hover .progress-bar {
+    width: var(--progress);
+}
+
+.skill-item:hover .progress-text {
+    opacity: 1;
 }
 
 /* Projects */
@@ -175,4 +211,12 @@ body.dark-mode {
 
 .dark-mode .project-card {
     background-color: var(--bs-dark);
+}
+
+.dark-mode .skill-item {
+    background-color: rgba(var(--bs-light-rgb), 0.1);
+}
+
+.dark-mode .skill-progress {
+    background-color: rgba(var(--bs-light-rgb), 0.1);
 }

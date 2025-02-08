@@ -22,6 +22,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Initialize progress bars
+    const progressBars = document.querySelectorAll('.progress-bar');
+    progressBars.forEach(bar => {
+        const progress = bar.getAttribute('data-progress');
+        bar.style.setProperty('--progress', `${progress}%`);
+    });
+
     // Mobile Menu
     const navbarToggler = document.querySelector('.navbar-toggler');
     const navbarCollapse = document.querySelector('.navbar-collapse');
@@ -36,10 +43,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Form Validation and Submission
     const contactForm = document.getElementById('contact-form');
-    
+
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        
+
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
@@ -58,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Intersection Observer for Animations
     const sections = document.querySelectorAll('.section');
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
