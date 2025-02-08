@@ -76,12 +76,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Intersection Observer for Animations
     const sections = document.querySelectorAll('.section');
+    const journeyItems = document.querySelectorAll('.journey-item');
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                if (entry.target.classList.contains('journey-item')) {
+                    entry.target.classList.add('animate');
+                } else {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
             }
         });
     }, {
@@ -93,5 +98,9 @@ document.addEventListener('DOMContentLoaded', function() {
         section.style.transform = 'translateY(20px)';
         section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
         observer.observe(section);
+    });
+
+    journeyItems.forEach(item => {
+        observer.observe(item);
     });
 });

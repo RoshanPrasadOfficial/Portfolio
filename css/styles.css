@@ -169,6 +169,44 @@ h2::after {
     margin: 0 12px 12px; /* Reduced from 15px */
 }
 
+/* Journey Section */
+.journey-item {
+    padding: 20px;
+    border-left: 3px solid var(--bs-primary);
+    margin-bottom: 30px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.journey-item::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 24px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--bs-primary);
+}
+
+.journey-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.journey-item:nth-child(1) { transition-delay: 0.2s; }
+.journey-item:nth-child(2) { transition-delay: 0.4s; }
+.journey-item:nth-child(3) { transition-delay: 0.6s; }
+.journey-item:nth-child(4) { transition-delay: 0.8s; }
+
+.journey-year {
+    font-weight: bold;
+    color: var(--bs-primary);
+    margin-bottom: 5px;
+}
+
 /* Contact Form */
 .contact-form {
     max-width: 500px; /* Reduced from 600px */
