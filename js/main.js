@@ -4,10 +4,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
     const icon = themeToggle.querySelector('i');
 
+    // Initialize theme based on user preference
+    if (localStorage.getItem('theme') === 'light') {
+        body.classList.remove('dark-mode');
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+    }
+
     themeToggle.addEventListener('click', () => {
         body.classList.toggle('dark-mode');
         icon.classList.toggle('fa-moon');
         icon.classList.toggle('fa-sun');
+
+        // Save theme preference
+        const isDarkMode = body.classList.contains('dark-mode');
+        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
     });
 
     // Smooth Scroll for Navigation Links

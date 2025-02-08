@@ -199,7 +199,7 @@ h2::after {
     }
 }
 
-/* Dark Mode Styles */
+/* Dark Mode Styles - Update these styles */
 body.dark-mode {
     background-color: var(--bs-dark);
     color: var(--bs-light);
