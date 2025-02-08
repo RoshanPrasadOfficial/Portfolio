@@ -27,7 +27,7 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 80px 0; /* Increased padding for better spacing */
+    padding: 80px 0;
     min-height: auto;
     display: flex;
     align-items: center;
@@ -37,6 +37,16 @@ body {
 
 .hero h1 {
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.wave-hand {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 5px;
 }
 
 .hero .lead {
