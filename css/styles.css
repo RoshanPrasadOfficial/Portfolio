@@ -274,8 +274,22 @@ h2::after {
 
 /* Contact Form */
 .contact-form {
-    max-width: 500px; /* Reduced from 600px */
+    max-width: 500px;
     margin: 0 auto;
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-control {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+}
+
+.contact-form .form-label {
+    color: #212529;
+    font-weight: 500;
 }
 
 /* Footer */
