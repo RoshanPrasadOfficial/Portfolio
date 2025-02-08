@@ -160,8 +160,9 @@ h2::after {
     flex-direction: column;
     background-color: rgba(var(--bs-primary-rgb), 0.1);
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     border: 1px solid rgba(var(--bs-primary-rgb), 0.2);
+    margin: 15px 0;
 }
 
 .project-card h3 {
