@@ -1,5 +1,19 @@
 :root {
     --transition-speed: 0.3s;
+    --light-bg: #ffffff;
+    --light-text: #212529;
+    --dark-bg: #212529;
+    --dark-text: #ffffff;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--light-text);
+}
+
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
 }
 
 html {
