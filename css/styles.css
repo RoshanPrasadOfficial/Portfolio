@@ -310,6 +310,39 @@ h2::after {
     }
 }
 
+/* About Section */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image .profile-img {
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-image .profile-img {
+        max-width: 250px;
+        margin-top: 20px;
+    }
+}
+
 /* Dark Mode Styles - Update these styles */
 body.dark-mode {
     background-color: var(--bs-dark);
