@@ -170,11 +170,27 @@ h2::after {
 }
 
 /* Journey Section */
+.journey-timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.journey-timeline::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background: var(--bs-primary);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1.5px;
+}
+
 .journey-item {
     padding: 20px;
-    border-left: 3px solid var(--bs-primary);
-    margin-bottom: 30px;
     position: relative;
+    width: 50%;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -183,12 +199,51 @@ h2::after {
 .journey-item::before {
     content: '';
     position: absolute;
-    left: -10px;
-    top: 24px;
     width: 16px;
     height: 16px;
     border-radius: 50%;
     background: var(--bs-primary);
+    top: 24px;
+}
+
+.journey-item:nth-child(odd) {
+    left: 0;
+    padding-right: 40px;
+}
+
+.journey-item:nth-child(even) {
+    left: 50%;
+    padding-left: 40px;
+}
+
+.journey-item:nth-child(odd)::before {
+    right: -8px;
+}
+
+.journey-item:nth-child(even)::before {
+    left: -8px;
+}
+
+@media (max-width: 768px) {
+    .journey-timeline::after {
+        left: 31px;
+    }
+    
+    .journey-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .journey-item:nth-child(odd),
+    .journey-item:nth-child(even) {
+        left: 0;
+    }
+    
+    .journey-item:nth-child(odd)::before,
+    .journey-item:nth-child(even)::before {
+        left: 23px;
+    }
 }
 
 .journey-item.animate {
