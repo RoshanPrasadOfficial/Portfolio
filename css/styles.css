@@ -227,18 +227,18 @@ h2::after {
     .journey-timeline::after {
         left: 31px;
     }
-    
+
     .journey-item {
         width: 100%;
         padding-left: 70px;
         padding-right: 25px;
     }
-    
+
     .journey-item:nth-child(odd),
     .journey-item:nth-child(even) {
         left: 0;
     }
-    
+
     .journey-item:nth-child(odd)::before,
     .journey-item:nth-child(even)::before {
         left: 23px;
@@ -278,9 +278,24 @@ h2::after {
 }
 
 .social-link {
-    font-size: 1.3rem; /* Reduced from 1.5rem */
-    margin: 0 8px; /* Reduced from 10px */
+    font-size: 1.3rem;
+    margin: 0 8px;
     transition: color var(--transition-speed);
+}
+
+.designed-with-love {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.designed-with-love i {
+    color: #ff4b4b;
+    animation: heartbeat 1.5s ease infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
 }
 
 /* Animations */
@@ -336,7 +351,7 @@ h2::after {
     .about-content {
         flex-direction: column;
     }
-    
+
     .about-image .profile-img {
         max-width: 250px;
         margin-top: 20px;
