@@ -405,7 +405,34 @@ h2::after {
     }
 }
 
-/* Dark Mode Styles - Update these styles */
+/* Navbar Light Mode Adjustments */
+body:not(.dark-mode) .navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+body:not(.dark-mode) .navbar-nav .nav-link,
+body:not(.dark-mode) .navbar-brand {
+    color: #212529 !important;
+}
+
+body:not(.dark-mode) .navbar-nav .nav-link:hover {
+    color: var(--bs-primary) !important;
+}
+
+body:not(.dark-mode) .navbar-toggler {
+    border-color: rgba(0,0,0,0.1);
+}
+
+body:not(.dark-mode) .navbar-toggler-icon {
+    filter: invert(0);
+}
+
+body:not(.dark-mode) #theme-toggle {
+    color: #212529 !important;
+}
+
+/* Dark Mode Styles */
 body.dark-mode {
     background-color: var(--bs-dark);
     color: var(--bs-light);
