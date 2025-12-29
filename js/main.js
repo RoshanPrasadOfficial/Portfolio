@@ -85,22 +85,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                if (entry.target.classList.contains('journey-item')) {
-                    entry.target.classList.add('animate');
-                } else {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
+                entry.target.classList.add('animate');
+            } else {
+                // Remove the animation class when the element leaves the viewport
+                // This ensures it re-animates when scrolling back down
+                entry.target.classList.remove('animate');
             }
         });
     }, {
-        threshold: 0.1
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px' // Slightly trigger before it's fully in view
     });
 
     sections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
         observer.observe(section);
     });
 

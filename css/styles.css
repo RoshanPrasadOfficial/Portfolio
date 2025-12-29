@@ -330,13 +330,26 @@ h2::after {
 }
 
 /* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-.section {
-    animation: fadeIn 1s ease-out;
+.section.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.journey-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.journey-item.animate {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Responsive Design */
