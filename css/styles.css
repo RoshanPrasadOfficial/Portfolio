@@ -100,41 +100,28 @@ h2::after {
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 15px;
     text-align: center;
-}
-
-@media (max-width: 992px) {
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .skill-item {
-    padding: 15px;
-    border-radius: 10px;
+    padding: 10px;
+    border-radius: 8px;
     transition: transform var(--transition-speed);
     background-color: rgba(var(--bs-primary-rgb), 0.1);
     position: relative;
 }
 
-.skill-item .progress-text {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 0.9rem;
-    color: var(--bs-primary);
-    font-weight: 600;
-}
-
 .skill-item i {
-    font-size: 3rem; 
-    margin-bottom: 12px;
+    font-size: 2.2rem; 
+    margin-bottom: 8px;
     color: var(--bs-primary);
 }
 
 .skill-item span {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
     display: block;
 }
