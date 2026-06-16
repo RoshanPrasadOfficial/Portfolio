@@ -59,24 +59,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // Form Validation and Submission
     const contactForm = document.getElementById('contact-form');
 
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
 
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
 
-        // Basic email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            alert('Please enter a valid email address');
-            return;
-        }
+            // Basic email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address');
+                return;
+            }
 
-        // Simulate form submission
-        alert('Thank you for your message! I will get back to you soon.');
-        contactForm.reset();
-    });
+            // Simulate form submission
+            alert('Thank you for your message! I will get back to you soon.');
+            contactForm.reset();
+        });
+    }
 
     // Intersection Observer for Animations
     const sections = document.querySelectorAll('.section');
