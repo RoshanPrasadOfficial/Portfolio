@@ -3,34 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional portfolio showcasing web development projects and skills">
-    <title>Roshan Kumar - Web Developer Portfolio</title>
-    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+    <meta name="description" content="Roshan Kumar — Full Stack Web Developer & BCA Student">
+    <title>Roshan Kumar — Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="dark-mode">
-    <nav class="navbar navbar-expand-lg fixed-top">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
         <div class="container">
-            <a class="navbar-brand" href="#home">RK</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <a class="navbar-brand" href="#home">RK<span>.</span></a>
+
+            <button class="navbar-toggler" id="nav-toggler" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <li class="nav-item">
-                        <a href="/assets/resume.pdf" class="nav-link" download>
-                            <i class="fas fa-file-download"></i> Resume
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <button id="theme-toggle" class="btn btn-link nav-link">
+
+            <div class="navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li><a class="nav-link" href="#journey">Journey</a></li>
+                    <li><a class="nav-link" href="#skills">Skills</a></li>
+                    <li><a class="nav-link" href="#projects">Projects</a></li>
+                    <li><a class="nav-link" href="#about">About</a></li>
+                    <li><a class="nav-link" href="#contact">Contact</a></li>
+                    <li><a href="assets/resume.pdf" class="nav-link resume-link" download><i class="fas fa-arrow-down"></i> Resume</a></li>
+                    <li>
+                        <button id="theme-toggle" title="Toggle theme">
                             <i class="fas fa-moon"></i>
                         </button>
                     </li>
@@ -39,229 +38,226 @@
         </div>
     </nav>
 
+    <!-- HERO -->
     <section id="home" class="hero">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-12 text-center">
-                    <h1 class="display-4">
-                        <span class="greeting">
-                            Hi <img src="https://raw.githubusercontent.com/TheDudeThatCode/TheDudeThatCode/master/Assets/wave.gif" width="35px" height="35px" alt="waving hand" class="wave-hand">
-                        </span>
-                        <span>I'm Roshan Kumar</span>
-                    </h1>
-                    <p class="lead">Full Stack Web Developer</p>
-                    <a href="assets/resume.pdf" class="btn btn-primary" download>Download CV</a>
-                </div>
+        <div class="hero-inner">
+            <div class="hero-greeting">
+                <img src="https://raw.githubusercontent.com/TheDudeThatCode/TheDudeThatCode/master/Assets/wave.gif" width="22" height="22" alt="wave">
+                Hey there, I'm
             </div>
+            <h1>Roshan <span class="accent">Kumar</span></h1>
+            <p class="hero-role">
+                <span>Full Stack Web Developer</span> &amp; BCA Student
+            </p>
+            <a href="assets/resume.pdf" class="hero-cta" download>
+                <i class="fas fa-download"></i> Download CV
+            </a>
         </div>
     </section>
 
+    <!-- JOURNEY -->
     <section id="journey" class="section">
-        <div class="container">
+        <div class="section-header">
+            <span class="section-label">Timeline</span>
             <h2>My Journey</h2>
-            <div class="journey-timeline">
-                <div class="journey-item">
-                    <div class="journey-year">Jan 2026 - March 2026</div>
-                    <h4>Internship</h4>
-                    <p>Codevocado (Current)</p>
-                </div>
-                <div class="journey-item">
-                    <div class="journey-year">2023 - 2026</div>
-                    <h4>BCA</h4>
-                    <p>SRM University Gangtok, Sikkim (Current)</p>
-                </div>
-                <div class="journey-item">
-                    <div class="journey-year">2021 - 2022</div>
-                    <h4>Class 12th (Commerce)</h4>
-                    <p>Kendriya Vidyalaya Gangtok, Sikkim, CBSE</p>
-                </div>
-                <div class="journey-item">
-                    <div class="journey-year">2019 - 2020</div>
-                    <h4>Class 10th</h4>
-                    <p>Sinha Model High school Patna, CBSE</p>
-                </div>
+            <p>A quick look at my education and experience so far.</p>
+        </div>
+
+        <div class="journey-timeline">
+            <div class="journey-item">
+                <div class="journey-dot"></div>
+                <div class="journey-year">Jan 2026 – Mar 2026</div>
+                <h4>Web Development Intern</h4>
+                <p>Codevocado &mdash; Currently working on real-world web projects</p>
+            </div>
+            <div class="journey-item">
+                <div class="journey-dot"></div>
+                <div class="journey-year">2023 – 2026</div>
+                <h4>Bachelor of Computer Applications (BCA)</h4>
+                <p>SRM University, Gangtok, Sikkim &mdash; Currently enrolled</p>
+            </div>
+            <div class="journey-item">
+                <div class="journey-dot"></div>
+                <div class="journey-year">2021 – 2022</div>
+                <h4>Class 12th — Commerce</h4>
+                <p>Kendriya Vidyalaya, Gangtok, Sikkim &mdash; CBSE Board</p>
+            </div>
+            <div class="journey-item">
+                <div class="journey-dot"></div>
+                <div class="journey-year">2019 – 2020</div>
+                <h4>Class 10th</h4>
+                <p>Sinha Model High School, Patna &mdash; CBSE Board</p>
             </div>
         </div>
     </section>
 
+    <!-- SKILLS -->
     <section id="skills" class="section">
-        <div class="container">
+        <div class="section-header">
+            <span class="section-label">Technologies</span>
             <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <i class="fab fa-html5"></i>
-                    <span>HTML5</span>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-progress="90">
-                            <span class="progress-text">90%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-css3-alt"></i>
-                    <span>CSS3</span>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-progress="85">
-                            <span class="progress-text">85%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-js"></i>
-                    <span>JavaScript</span>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-progress="80">
-                            <span class="progress-text">80%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-react"></i>
-                    <span>React</span>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-progress="75">
-                            <span class="progress-text">75%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-java"></i>
-                    <span>Java</span>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-progress="70">
-                            <span class="progress-text">70%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-code"></i>
-                    <span>C</span>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-progress="65">
-                            <span class="progress-text">65%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-php"></i>
-                    <span>PHP</span>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-progress="75">
-                            <span class="progress-text">75%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-table"></i>
-                    <span>SQL</span>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-progress="85">
-                            <span class="progress-text">85%</span>
-                        </div>
-                    </div>
-                </div>
+            <p>Languages and tools I work with.</p>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-item">
+                <i class="fab fa-html5"></i>
+                <span>HTML5</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS3</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-js"></i>
+                <span>JavaScript</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-react"></i>
+                <span>React</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-java"></i>
+                <span>Java</span>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-code"></i>
+                <span>C</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-php"></i>
+                <span>PHP</span>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-database"></i>
+                <span>SQL</span>
             </div>
         </div>
     </section>
 
+    <!-- PROJECTS -->
     <section id="projects" class="section">
-        <div class="container">
+        <div class="section-header">
+            <span class="section-label">Work</span>
             <h2>Projects</h2>
-            <div class="row">
-                <div class="col-md-6 col-lg-3">
-                    <div class="project-card">
-                        <h3>Tic-Tac-Toe Game</h3>
-                        <p>Classic Tic-Tac-Toe game with an interactive UI and smooth animations</p>
-                        <div class="project-meta">
-                            <div class="languages">HTML, CSS, JavaScript</div>
-                            <div class="duration">1 week</div>
-                        </div>
+            <p>A selection of things I've built.</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-gamepad"></i></div>
+                <h3>Tic-Tac-Toe Game</h3>
+                <p>Classic Tic-Tac-Toe with an interactive UI, win detection, and smooth animations built with vanilla web technologies.</p>
+                <div class="project-meta">
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JS</span>
                     </div>
+                    <span class="project-duration">1 week</span>
                 </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="project-card">
-                        <h3>College ERP System</h3>
-                        <p>Comprehensive ERP system for managing student records and college administrative tasks</p>
-                        <div class="project-meta">
-                            <div class="languages">React, SQL</div>
-                            <div class="duration">2 months</div>
-                        </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-university"></i></div>
+                <h3>College ERP System</h3>
+                <p>Comprehensive ERP for managing student records, attendance, and college administrative workflows at scale.</p>
+                <div class="project-meta">
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">SQL</span>
                     </div>
+                    <span class="project-duration">2 months</span>
                 </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="project-card">
-                        <h3>Calculator</h3>
-                        <p>Functional calculator app with basic and advanced mathematical operations</p>
-                        <div class="project-meta">
-                            <div class="languages">HTML, CSS, JavaScript</div>
-                            <div class="duration">1 week</div>
-                        </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-calculator"></i></div>
+                <h3>Calculator App</h3>
+                <p>Functional calculator with basic and advanced math operations, keyboard support, and a clean minimal interface.</p>
+                <div class="project-meta">
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JS</span>
                     </div>
+                    <span class="project-duration">1 week</span>
                 </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="project-card">
-                        <h3>Portfolio Website</h3>
-                        <p>Responsive personal portfolio with dark mode support</p>
-                        <div class="project-meta">
-                            <div class="languages">HTML, CSS, JavaScript</div>
-                            <div class="duration">1 month</div>
-                        </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-user-circle"></i></div>
+                <h3>Portfolio Website</h3>
+                <p>This very site — a responsive personal portfolio with dark/light mode, scroll animations, and a minimalist design.</p>
+                <div class="project-meta">
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Python</span>
                     </div>
+                    <span class="project-duration">1 month</span>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about" class="section">
-        <div class="container">
+        <div class="section-header">
+            <span class="section-label">Who I Am</span>
             <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I'm a passionate web developer with experience in creating modern, responsive web applications. I specialize in both front-end and back-end development, bringing creative designs to life with efficient and scalable code.</p>
-                    <p>Apart from coding, I love travelling, capturing scenic moments, and recording nature videos 📸🎥, which I later edit and share on my social media. I enjoy expressing creativity through visuals and storytelling.</p>
-                    <p>I also love playing the guitar 🎸, which helps me relax and stay inspired beyond the world of tech.</p>
-                </div>
-                <div class="about-image">
-                    <img src="assets/profile.jpg" alt="Roshan Kumar" class="profile-img">
-                </div>
+        </div>
+
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm a <strong>passionate web developer</strong> with a focus on creating modern, responsive, and user-friendly web applications. I work across both front-end and back-end, turning ideas into clean, functional products.</p>
+                <p>Outside of coding, I love <strong>travelling</strong> and capturing scenic moments through photography and videography 📸🎥 — I edit and share these on social media as a way of expressing creativity beyond the screen.</p>
+                <p>I also play the <strong>guitar</strong> 🎸, which keeps me grounded and inspired whenever tech gets overwhelming.</p>
+            </div>
+            <div class="about-image">
+                <img src="assets/profile.jpg" alt="Roshan Kumar" class="profile-img">
             </div>
         </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="section">
-        <div class="container">
+        <div class="section-header">
+            <span class="section-label">Get in Touch</span>
             <h2>Contact Me</h2>
-            <form id="contact-form" class="contact-form">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name" required>
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
+            <p>Have a project in mind or just want to say hi? I'd love to hear from you.</p>
         </div>
+
+        <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-group">
+                <label class="form-label" for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="message">Message</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="What's on your mind?" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">
+                <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+        </form>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-            </div>
-            <p>&copy; 2025 Roshan Kumar. All rights reserved.</p>
-            <p class="designed-with-love">Designed and developed with <i class="fas fa-heart"></i></p>
+        <div class="social-links">
+            <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
         </div>
+        <p>&copy; 2025 Roshan Kumar. All rights reserved.</p>
+        <p class="designed-with-love">Designed &amp; built with <i class="fas fa-heart"></i></p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
