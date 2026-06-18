@@ -246,24 +246,55 @@ h2::after {
 }
 
 @media (max-width: 768px) {
+    /* Move vertical line to the left edge */
     .journey-timeline::after {
-        left: 31px;
+        left: 20px;
+        width: 2px;
     }
 
-    .journey-item {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-
+    /* All items stack in a single column */
+    .journey-item,
     .journey-item:nth-child(odd),
     .journey-item:nth-child(even) {
+        width: 100%;
         left: 0;
+        padding-left: 52px;
+        padding-right: 12px;
+        padding-top: 12px;
+        padding-bottom: 12px;
     }
 
+    /* Dot sits on the left line */
+    .journey-item::before,
     .journey-item:nth-child(odd)::before,
     .journey-item:nth-child(even)::before {
-        left: 23px;
+        left: 12px;
+        right: auto;
+        top: 18px;
+        width: 14px;
+        height: 14px;
+    }
+
+    /* Card background for readability on phone */
+    .journey-item {
+        background: rgba(var(--bs-primary-rgb), 0.06);
+        border-radius: 8px;
+        margin-bottom: 12px;
+        border-left: 3px solid var(--bs-primary);
+    }
+
+    .journey-year {
+        font-size: 0.82rem;
+    }
+
+    .journey-item h4 {
+        font-size: 1rem;
+        margin-bottom: 2px;
+    }
+
+    .journey-item p {
+        font-size: 0.88rem;
+        margin-bottom: 0;
     }
 }
 
