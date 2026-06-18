@@ -164,12 +164,14 @@ h2::after {
 .project-card h3 {
     font-size: 1.1rem;
     margin-bottom: 10px;
+    text-align: left;
 }
 
 .project-card p {
     font-size: 0.9rem;
     margin-bottom: 15px;
     flex-grow: 1;
+    text-align: left;
 }
 
 .project-meta {
