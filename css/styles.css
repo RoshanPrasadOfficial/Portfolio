@@ -454,6 +454,47 @@ h2::after {
     50% { transform: scale(1.2); }
 }
 
+/* Footer Light Mode */
+body:not(.dark-mode) .footer-main {
+    background: #f0eeff;
+}
+
+body:not(.dark-mode) .footer-tagline {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+body:not(.dark-mode) .footer-heading {
+    color: #12103a;
+}
+
+body:not(.dark-mode) .footer-box {
+    border-color: rgba(18, 16, 58, 0.2);
+    background: rgba(18, 16, 58, 0.04);
+    color: #12103a;
+}
+
+body:not(.dark-mode) .footer-box:hover {
+    border-color: #5b21b6;
+    background: rgba(91, 33, 182, 0.08);
+    color: #12103a;
+}
+
+body:not(.dark-mode) .footer-box-label {
+    color: rgba(18, 16, 58, 0.5);
+}
+
+body:not(.dark-mode) .footer-box-num {
+    color: rgba(18, 16, 58, 0.3);
+}
+
+body:not(.dark-mode) .footer-bottom {
+    background: #e0daff;
+}
+
+body:not(.dark-mode) .footer-bottom-inner {
+    color: rgba(18, 16, 58, 0.5);
+}
+
 @media (max-width: 576px) {
     .footer-links-row {
         flex-direction: column;
