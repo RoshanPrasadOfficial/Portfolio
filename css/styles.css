@@ -384,8 +384,8 @@ h2::after {
 
 .footer-plane.plane-landed {
     opacity: 1;
-    transform: translateX(0) translateY(0) rotate(45deg);
-    animation: planeLand 4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: planeLand 4s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+               planeHover 3s ease-in-out 4s infinite;
 }
 
 @keyframes planeLand {
@@ -393,6 +393,12 @@ h2::after {
     60%  { opacity: 1; transform: translateX(12px) translateY(-10px) rotate(45deg); }
     80%  { transform: translateX(-6px) translateY(4px) rotate(45deg); }
     100% { opacity: 1; transform: translateX(0) translateY(0) rotate(45deg); }
+}
+
+@keyframes planeHover {
+    0%   { transform: translateX(0) translateY(0) rotate(45deg); }
+    50%  { transform: translateX(0) translateY(-8px) rotate(45deg); }
+    100% { transform: translateX(0) translateY(0) rotate(45deg); }
 }
 
 .footer-links-row {
