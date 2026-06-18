@@ -89,14 +89,12 @@ document.addEventListener('DOMContentLoaded', function() {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animate');
             } else {
-                // Remove the animation class when the element leaves the viewport
-                // This ensures it re-animates when scrolling back down
                 entry.target.classList.remove('animate');
             }
         });
     }, {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px' // Slightly trigger before it's fully in view
+        rootMargin: '0px 0px -50px 0px'
     });
 
     sections.forEach(section => {
@@ -106,4 +104,22 @@ document.addEventListener('DOMContentLoaded', function() {
     journeyItems.forEach(item => {
         observer.observe(item);
     });
+
+    // Paper plane fly-in animation on footer enter
+    const footerPlane = document.querySelector('.footer-plane');
+    if (footerPlane) {
+        const planeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    footerPlane.classList.remove('plane-landed');
+                    void footerPlane.offsetWidth; // force reflow to restart animation
+                    footerPlane.classList.add('plane-landed');
+                } else {
+                    footerPlane.classList.remove('plane-landed');
+                }
+            });
+        }, { threshold: 0.3 });
+
+        planeObserver.observe(document.querySelector('.footer-main'));
+    }
 });
