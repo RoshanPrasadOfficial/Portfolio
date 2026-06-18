@@ -41,6 +41,36 @@ body {
 .navbar-brand {
     font-weight: 700;
     font-size: 1.5rem;
+    transition: color var(--transition-speed), letter-spacing 0.3s;
+}
+
+.navbar-brand:hover {
+    letter-spacing: 2px;
+}
+
+/* Nav link animated underline */
+.navbar-nav .nav-link {
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--bs-primary);
+    border-radius: 2px;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+    left: 0;
 }
 
 /* Hero Section */
