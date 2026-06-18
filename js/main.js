@@ -105,21 +105,19 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(item);
     });
 
-    // Paper plane fly-in animation on footer enter
+    // Paper plane fly-in animation — plays once per page load
     const footerPlane = document.querySelector('.footer-plane');
-    if (footerPlane) {
+    const footerMain = document.querySelector('.footer-main');
+    if (footerPlane && footerMain) {
         const planeObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    footerPlane.classList.remove('plane-landed');
-                    void footerPlane.offsetWidth; // force reflow to restart animation
                     footerPlane.classList.add('plane-landed');
-                } else {
-                    footerPlane.classList.remove('plane-landed');
+                    planeObserver.disconnect(); // stop observing after first trigger
                 }
             });
         }, { threshold: 0.3 });
 
-        planeObserver.observe(document.querySelector('.footer-main'));
+        planeObserver.observe(footerMain);
     }
 });
