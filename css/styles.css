@@ -373,21 +373,21 @@ h2::after {
     color: #a3e635;
     flex-shrink: 0;
     opacity: 0;
-    transform: translateX(-260px) translateY(60px) rotate(-45deg);
+    transform: translateX(-260px) translateY(60px) rotate(45deg);
     transition: none;
 }
 
 .footer-plane.plane-landed {
     opacity: 1;
-    transform: translateX(0) translateY(0) rotate(-45deg);
-    animation: planeLand 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    transform: translateX(0) translateY(0) rotate(45deg);
+    animation: planeLand 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 @keyframes planeLand {
-    0%   { opacity: 0; transform: translateX(-280px) translateY(70px) rotate(-45deg); }
-    60%  { opacity: 1; transform: translateX(12px) translateY(-10px) rotate(-45deg); }
-    80%  { transform: translateX(-6px) translateY(4px) rotate(-45deg); }
-    100% { opacity: 1; transform: translateX(0) translateY(0) rotate(-45deg); }
+    0%   { opacity: 0; transform: translateX(-280px) translateY(70px) rotate(45deg); }
+    60%  { opacity: 1; transform: translateX(12px) translateY(-10px) rotate(45deg); }
+    80%  { transform: translateX(-6px) translateY(4px) rotate(45deg); }
+    100% { opacity: 1; transform: translateX(0) translateY(0) rotate(45deg); }
 }
 
 .footer-links-row {
