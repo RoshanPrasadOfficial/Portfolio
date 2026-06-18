@@ -380,7 +380,7 @@ h2::after {
 .footer-plane.plane-landed {
     opacity: 1;
     transform: translateX(0) translateY(0) rotate(45deg);
-    animation: planeLand 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: planeLand 4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 @keyframes planeLand {
