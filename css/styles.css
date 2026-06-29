@@ -236,6 +236,30 @@ h2::after {
     font-style: italic;
 }
 
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--bs-primary);
+    text-decoration: none;
+    transition: gap 0.2s ease, opacity 0.2s ease;
+}
+
+.project-link:hover {
+    gap: 10px;
+    opacity: 0.8;
+    color: var(--bs-primary);
+}
+
+@media (max-width: 576px) {
+    .project-card {
+        margin: 0 0 8px 0;
+    }
+}
+
 /* Journey Section */
 .journey-timeline {
     position: relative;
@@ -772,7 +796,7 @@ body:not(.dark-mode) .navbar-toggler {
 }
 
 body:not(.dark-mode) .navbar-toggler-icon {
-    filter: invert(0);
+    filter: invert(1);
 }
 
 body:not(.dark-mode) #theme-toggle {

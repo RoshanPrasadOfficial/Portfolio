@@ -1,3 +1,10 @@
+// Dot background parallax on mouse move
+document.addEventListener('mousemove', function(e) {
+    const x = (e.clientX / window.innerWidth - 0.5) * 12;
+    const y = (e.clientY / window.innerHeight - 0.5) * 12;
+    document.body.style.backgroundPosition = `${x}px ${y}px`;
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
