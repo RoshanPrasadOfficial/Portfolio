@@ -491,8 +491,8 @@ h2::after {
 
 .footer-plane.plane-landed {
     opacity: 1;
-    animation: planeLand 4s cubic-bezier(0.22, 1, 0.36, 1) forwards,
-               planeHover 3s ease-in-out 4s infinite;
+    animation: planeLand 2s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+               planeHover 3s ease-in-out 2s infinite;
 }
 
 @keyframes planeLand {
