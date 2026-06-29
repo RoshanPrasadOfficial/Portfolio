@@ -8,7 +8,7 @@
     const SPACING = 28;
     const DOT_R = 1;
     const INFLUENCE = 90;
-    const PUSH = 10;
+    const PUSH = 5;
 
     let mouse = { x: -999, y: -999 };
 
