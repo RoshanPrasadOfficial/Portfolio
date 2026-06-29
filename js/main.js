@@ -1,9 +1,60 @@
-// Dot background parallax on mouse move
-document.addEventListener('mousemove', function(e) {
-    const x = (e.clientX / window.innerWidth - 0.5) * 12;
-    const y = (e.clientY / window.innerHeight - 0.5) * 12;
-    document.body.style.backgroundPosition = `${x}px ${y}px`;
-});
+// Interactive dot background canvas
+(function() {
+    const canvas = document.createElement('canvas');
+    canvas.id = 'dot-canvas';
+    document.body.prepend(canvas);
+    const ctx = canvas.getContext('2d');
+
+    const SPACING = 28;
+    const DOT_R = 1;
+    const INFLUENCE = 90;
+    const PUSH = 10;
+
+    let mouse = { x: -999, y: -999 };
+
+    function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+    document.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
+    document.addEventListener('mouseleave', () => { mouse.x = -999; mouse.y = -999; });
+
+    function getDotColor() {
+        return document.body.classList.contains('dark-mode')
+            ? 'rgba(100,160,200,0.25)'
+            : 'rgba(100,130,220,0.3)';
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = getDotColor();
+        const cols = Math.ceil(canvas.width / SPACING) + 1;
+        const rows = Math.ceil(canvas.height / SPACING) + 1;
+        for (let i = 0; i < cols; i++) {
+            for (let j = 0; j < rows; j++) {
+                const bx = i * SPACING;
+                const by = j * SPACING;
+                const dx = bx - mouse.x;
+                const dy = by - mouse.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                let dotX = bx, dotY = by;
+                if (dist < INFLUENCE && dist > 0) {
+                    const force = (INFLUENCE - dist) / INFLUENCE;
+                    const angle = Math.atan2(dy, dx);
+                    dotX += Math.cos(angle) * force * PUSH;
+                    dotY += Math.sin(angle) * force * PUSH;
+                }
+                ctx.beginPath();
+                ctx.arc(dotX, dotY, DOT_R, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+        requestAnimationFrame(animate);
+    }
+    animate();
+})();
 
 document.addEventListener('DOMContentLoaded', function() {
     // Theme Toggle
