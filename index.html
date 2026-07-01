@@ -1,373 +1,476 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional portfolio showcasing web development projects and skills">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Professional portfolio showcasing web development projects and skills"
+    />
     <title>Roshan Kumar - Web Developer Portfolio</title>
-    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Rubik:wght@500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body class="dark-mode">
+    <link
+      rel="stylesheet"
+      href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Rubik:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="dark-mode">
     <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#home">RK</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+      <div class="container">
+        <a class="navbar-brand" href="#home">RK</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
 
-                    <li class="nav-item">
-                        <a href="/assets/resume.pdf" class="nav-link" download>
-                            <i class="fas fa-file-download"></i> Resume
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <button id="theme-toggle" class="btn btn-link nav-link">
-                            <i class="fas fa-moon"></i>
-                        </button>
-                    </li>
-                </ul>
-            </div>
+            <li class="nav-item">
+              <a href="/assets/resume.pdf" class="nav-link" download>
+                <i class="fas fa-file-download"></i> Resume
+              </a>
+            </li>
+            <li class="nav-item">
+              <button id="theme-toggle" class="btn btn-link nav-link">
+                <i class="fas fa-moon"></i>
+              </button>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <section id="home" class="hero">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-12 text-center">
-                    <h1 class="display-4">
-                        <span class="greeting">
-                            Hi <img src="https://raw.githubusercontent.com/TheDudeThatCode/TheDudeThatCode/master/Assets/wave.gif" width="35px" height="35px" alt="waving hand" class="wave-hand">
-                        </span>
-                        <span>I'm Roshan Kumar</span>
-                    </h1>
-                    <p class="lead">Full Stack Web Developer</p>
-                    <a href="assets/resume.pdf" class="btn btn-primary" download>Download CV</a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-12 text-center">
+            <h1 class="display-4">
+              <span class="greeting">
+                Hi
+                <img
+                  src="https://raw.githubusercontent.com/TheDudeThatCode/TheDudeThatCode/master/Assets/wave.gif"
+                  width="35px"
+                  height="35px"
+                  alt="waving hand"
+                  class="wave-hand"
+                />
+              </span>
+              <span>I'm Roshan Kumar</span>
+            </h1>
+            <p class="lead">Full Stack Web Developer</p>
+            <a href="assets/resume.pdf" class="btn btn-primary" download
+              >Download CV</a
+            >
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="journey" class="section">
-        <div class="container">
-            <h2>My Journey</h2>
-            <p class="journey-subtitle">Explore my educational and professional journey that shaped my path.</p>
-            <div class="journey-timeline">
-                <div class="journey-item">
-                    <div class="journey-card">
-                        <div class="journey-card-header">
-                            <h4 class="journey-org">SAP ABAP Developer</h4>
-                            <p class="journey-role">Indigi Consulting and Solutions Pvt Ltd &middot; Full Time</p>
-                        </div>
-                        <hr class="journey-divider">
-                        <p class="journey-hl-title">Highlights</p>
-                        <ul class="journey-hl">
-                            <li>SAP ABAP programming and custom development</li>
-                            <li>Working on enterprise-level SAP solutions</li>
-                        </ul>
-                    </div>
-                    <span class="journey-badge">May 2026 – Present</span>
-                </div>
-                <div class="journey-item">
-                    <div class="journey-card">
-                        <div class="journey-card-header">
-                            <h4 class="journey-org">Software Engineer Intern</h4>
-                            <p class="journey-role">Indian Council of Social Science Research (ICSSR)</p>
-                        </div>
-                        <hr class="journey-divider">
-                        <p class="journey-hl-title">Highlights</p>
-                        <ul class="journey-hl">
-                            <li>Contributed to software development and engineering tasks</li>
-                            <li>Collaborated on research-driven technical projects</li>
-                        </ul>
-                    </div>
-                    <span class="journey-badge">15 May 2026 – Present</span>
-                </div>
-                <div class="journey-item">
-                    <div class="journey-card">
-                        <div class="journey-card-header">
-                            <h4 class="journey-org">Full Stack Developer Intern</h4>
-                            <p class="journey-role">Codevocado</p>
-                        </div>
-                        <hr class="journey-divider">
-                        <p class="journey-hl-title">Highlights</p>
-                        <ul class="journey-hl">
-                            <li>Built full stack web applications using React and Node.js</li>
-                            <li>Worked on responsive UI and backend integrations</li>
-                        </ul>
-                    </div>
-                    <span class="journey-badge">Jan 2026 – Mar 2026</span>
-                </div>
-                <div class="journey-item">
-                    <div class="journey-card">
-                        <div class="journey-card-header">
-                            <h4 class="journey-org">Bachelor of Computer Applications (BCA)</h4>
-                            <p class="journey-role">SRM University Gangtok, Sikkim</p>
-                        </div>
-                        <hr class="journey-divider">
-                        <p class="journey-hl-title">Highlights</p>
-                        <ul class="journey-hl">
-                            <li>Core computer science and web development curriculum</li>
-                            <li>Currently in final year (2023 – 2026)</li>
-                        </ul>
-                    </div>
-                    <span class="journey-badge">2023 – 2026</span>
-                </div>
-                <div class="journey-item">
-                    <div class="journey-card">
-                        <div class="journey-card-header">
-                            <h4 class="journey-org">Class 12th – Commerce</h4>
-                            <p class="journey-role">Kendriya Vidyalaya Gangtok, Sikkim &middot; CBSE</p>
-                        </div>
-                        <hr class="journey-divider">
-                        <p class="journey-hl-title">Highlights</p>
-                        <ul class="journey-hl">
-                            <li>Completed senior secondary with Commerce stream</li>
-                            <li>CBSE Board examination</li>
-                        </ul>
-                    </div>
-                    <span class="journey-badge">2021 – 2022</span>
-                </div>
+      <div class="container">
+        <h2>My Journey</h2>
+        <p class="journey-subtitle">
+          Explore my educational and professional journey that shaped my path.
+        </p>
+        <div class="journey-timeline">
+          <div class="journey-item">
+            <div class="journey-card">
+              <div class="journey-card-header">
+                <h4 class="journey-org">SAP ABAP Developer</h4>
+                <p class="journey-role">
+                  Indigi Consulting and Solutions Pvt Ltd &middot; Full Time
+                </p>
+              </div>
+              <hr class="journey-divider" />
+              <p class="journey-hl-title">Highlights</p>
+              <ul class="journey-hl">
+                <li>SAP ABAP programming and custom development</li>
+                <li>Working on enterprise-level SAP solutions</li>
+              </ul>
             </div>
+            <span class="journey-badge">May 2026 – Present</span>
+          </div>
+          <div class="journey-item">
+            <div class="journey-card">
+              <div class="journey-card-header">
+                <h4 class="journey-org">Software Engineer Intern</h4>
+                <p class="journey-role">
+                  Indian Council of Social Science Research (ICSSR)
+                </p>
+              </div>
+              <hr class="journey-divider" />
+              <p class="journey-hl-title">Highlights</p>
+              <ul class="journey-hl">
+                <li>
+                  Contributed to software development and engineering tasks
+                </li>
+                <li>Collaborated on research-driven technical projects</li>
+              </ul>
+            </div>
+            <span class="journey-badge">15 May 2026 – Present</span>
+          </div>
+          <div class="journey-item">
+            <div class="journey-card">
+              <div class="journey-card-header">
+                <h4 class="journey-org">Full Stack Developer Intern</h4>
+                <p class="journey-role">Codevocado</p>
+              </div>
+              <hr class="journey-divider" />
+              <p class="journey-hl-title">Highlights</p>
+              <ul class="journey-hl">
+                <li>
+                  Built full stack web applications using React and Node.js
+                </li>
+                <li>Worked on responsive UI and backend integrations</li>
+              </ul>
+            </div>
+            <span class="journey-badge">Jan 2026 – Mar 2026</span>
+          </div>
+          <div class="journey-item">
+            <div class="journey-card">
+              <div class="journey-card-header">
+                <h4 class="journey-org">
+                  Bachelor of Computer Applications (BCA)
+                </h4>
+                <p class="journey-role">SRM University Gangtok, Sikkim</p>
+              </div>
+              <hr class="journey-divider" />
+              <p class="journey-hl-title">Highlights</p>
+              <ul class="journey-hl">
+                <li>Core computer science and web development curriculum</li>
+                <li>Currently in final year (2023 – 2026)</li>
+              </ul>
+            </div>
+            <span class="journey-badge">2023 – 2026</span>
+          </div>
+          <div class="journey-item">
+            <div class="journey-card">
+              <div class="journey-card-header">
+                <h4 class="journey-org">Class 12th – Commerce</h4>
+                <p class="journey-role">
+                  Kendriya Vidyalaya Gangtok, Sikkim &middot; CBSE
+                </p>
+              </div>
+              <hr class="journey-divider" />
+              <p class="journey-hl-title">Highlights</p>
+              <ul class="journey-hl">
+                <li>Completed senior secondary with Commerce stream</li>
+                <li>CBSE Board examination</li>
+              </ul>
+            </div>
+            <span class="journey-badge">2021 – 2022</span>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="skills" class="section">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <i class="fab fa-html5"></i>
-                    <span>HTML5</span>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-progress="90">
-                            <span class="progress-text">90%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-css3-alt"></i>
-                    <span>CSS3</span>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-progress="85">
-                            <span class="progress-text">85%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-js"></i>
-                    <span>JavaScript</span>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-progress="80">
-                            <span class="progress-text">80%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-react"></i>
-                    <span>React</span>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-progress="75">
-                            <span class="progress-text">75%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-java"></i>
-                    <span>Java</span>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-progress="70">
-                            <span class="progress-text">70%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-code"></i>
-                    <span>C</span>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-progress="65">
-                            <span class="progress-text">65%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-php"></i>
-                    <span>PHP</span>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-progress="75">
-                            <span class="progress-text">75%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-table"></i>
-                    <span>SQL</span>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-progress="85">
-                            <span class="progress-text">85%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-android"></i>
-                    <span>Android Studio</span>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-progress="65">
-                            <span class="progress-text">65%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-laravel"></i>
-                    <span>Laravel</span>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-progress="70">
-                            <span class="progress-text">70%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-palette"></i>
-                    <span>Canva</span>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-progress="80">
-                            <span class="progress-text">80%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-microsoft"></i>
-                    <span>MS Office</span>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-progress="85">
-                            <span class="progress-text">85%</span>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <i class="fab fa-html5"></i>
+            <span>HTML5</span>
+            <div class="skill-progress">
+              <div class="progress-bar" data-progress="90">
+                <span class="progress-text">90%</span>
+              </div>
             </div>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-css3-alt"></i>
+            <span>CSS3</span>
+            <div class="skill-progress">
+              <div class="progress-bar" data-progress="85">
+                <span class="progress-text">85%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-js"></i>
+            <span>JavaScript</span>
+            <div class="skill-progress">
+              <div class="progress-bar" data-progress="80">
+                <span class="progress-text">80%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-react"></i>
+            <span>React</span>
+            <div class="skill-progress">
+              <div class="progress-bar" data-progress="75">
+                <span class="progress-text">75%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-java"></i>
+            <span>Java</span>
+            <div class="skill-progress">
+              <div class="progress-bar" data-progress="70">
+                <span class="progress-text">70%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-code"></i>
+            <span>C</span>
+            <div class="skill-progress">
+              <div class="progress-bar" data-progress="65">
+                <span class="progress-text">65%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-php"></i>
+            <span>PHP</span>
+            <div class="skill-progress">
+              <div class="progress-bar" data-progress="75">
+                <span class="progress-text">75%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-table"></i>
+            <span>SQL</span>
+            <div class="skill-progress">
+              <div class="progress-bar" data-progress="85">
+                <span class="progress-text">85%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-android"></i>
+            <span>Android Studio</span>
+            <div class="skill-progress">
+              <div class="progress-bar" data-progress="65">
+                <span class="progress-text">65%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-laravel"></i>
+            <span>Laravel</span>
+            <div class="skill-progress">
+              <div class="progress-bar" data-progress="70">
+                <span class="progress-text">70%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-palette"></i>
+            <span>Canva</span>
+            <div class="skill-progress">
+              <div class="progress-bar" data-progress="80">
+                <span class="progress-text">80%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-microsoft"></i>
+            <span>MS Office</span>
+            <div class="skill-progress">
+              <div class="progress-bar" data-progress="85">
+                <span class="progress-text">85%</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="projects" class="section">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
-                    <div class="project-card">
-                        <h3>Learning Management System (LMS) with Online Proctoring</h3>
-                        <p>Web-based LMS with role-based access, online exam conduction, and real-time proctoring via camera and screen tracking.</p>
-                        <div class="project-meta">
-                            <div class="languages">React, Next.js, Node.js, MySQL, WebRTC, Socket.IO</div>
-                            <div class="duration">4 Months</div>
-                        </div>
-                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="project-card">
+              <h3>Learning Management System (LMS) with Online Proctoring</h3>
+              <p>
+                Web-based LMS with role-based access, online exam conduction,
+                and real-time proctoring via camera and screen tracking.
+              </p>
+              <div class="project-meta">
+                <div class="languages">
+                  React, Next.js, Node.js, MySQL, WebRTC, Socket.IO
                 </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="project-card">
-                        <h3>College ERP System</h3>
-                        <p>Comprehensive ERP system for managing student records and college administrative tasks</p>
-                        <div class="project-meta">
-                            <div class="languages">React, SQL</div>
-                            <div class="duration">2 months</div>
-                        </div>
-                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="project-card">
-                        <h3>Ludo Game</h3>
-                        <p>Digital Ludo board game with multiplayer support, dice rolling, and interactive game pieces</p>
-                        <div class="project-meta">
-                            <div class="languages">HTML, CSS, JavaScript</div>
-                            <div class="duration">2 weeks</div>
-                        </div>
-                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="project-card">
-                        <h3>Portfolio Website</h3>
-                        <p>Responsive personal portfolio with dark mode support</p>
-                        <div class="project-meta">
-                            <div class="languages">HTML, CSS, JavaScript</div>
-                            <div class="duration">1 month</div>
-                        </div>
-                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
+                <div class="duration">4 Months</div>
+              </div>
+              <a href="#" class="project-link"
+                >View Project <i class="fas fa-arrow-right"></i
+              ></a>
             </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="project-card">
+              <h3>College ERP System</h3>
+              <p>
+                Comprehensive ERP system for managing student records and
+                college administrative tasks
+              </p>
+              <div class="project-meta">
+                <div class="languages">React, SQL</div>
+                <div class="duration">2 months</div>
+              </div>
+              <a href="#" class="project-link"
+                >View Project <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="project-card">
+              <h3>Ludo Game</h3>
+              <p>
+                Digital Ludo board game with multiplayer support, dice rolling,
+                and interactive game pieces
+              </p>
+              <div class="project-meta">
+                <div class="languages">HTML, CSS, JavaScript</div>
+                <div class="duration">2 weeks</div>
+              </div>
+              <a href="#" class="project-link"
+                >View Project <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="project-card">
+              <h3>Portfolio Website</h3>
+              <p>Responsive personal portfolio with dark mode support</p>
+              <div class="project-meta">
+                <div class="languages">HTML, CSS, JavaScript</div>
+                <div class="duration">1 month</div>
+              </div>
+              <a href="#" class="project-link"
+                >View Project <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I'm a passionate web developer with experience in creating modern, responsive web applications. I specialize in both front-end and back-end development, bringing creative designs to life with efficient and scalable code.</p>
-                    <p>Apart from coding, I love travelling, capturing scenic moments, and recording nature videos 📸🎥, which I later edit and share on my social media. I enjoy expressing creativity through visuals and storytelling.</p>
-                    <p>I also love playing the guitar 🎸, which helps me relax and stay inspired beyond the world of tech.</p>
-                </div>
-                <div class="about-image">
-                    <img src="assets/profile.jpg" alt="Roshan Kumar" class="profile-img">
-                </div>
-            </div>
+      <div class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              I'm a passionate web developer with experience in creating modern,
+              responsive web applications. I specialize in both front-end and
+              back-end development, bringing creative designs to life with
+              efficient and scalable code.
+            </p>
+            <p>
+              Apart from coding, I love travelling, capturing scenic moments,
+              and recording nature videos 📸🎥, which I later edit and share on
+              my social media. I enjoy expressing creativity through visuals and
+              storytelling.
+            </p>
+            <p>
+              I also love playing the guitar 🎸, which helps me relax and stay
+              inspired beyond the world of tech.
+            </p>
+          </div>
+          <div class="about-image">
+            <img
+              src="assets/profile.jpg"
+              alt="Roshan Kumar"
+              class="profile-img"
+            />
+          </div>
         </div>
+      </div>
     </section>
 
     <footer class="footer">
-        <div class="footer-main">
-            <div class="container">
-                <p class="footer-tagline">THE BALL IS IN YOUR COURT</p>
-                <div class="footer-heading-wrap">
-                    <h2 class="footer-heading">INTERESTED ?<br>LET'S TALK !</h2>
-                    <div class="footer-plane">
-                        <i class="fas fa-paper-plane"></i>
-                    </div>
-                </div>
-                <div class="footer-links-row">
-                    <a href="mailto:roshankumar@example.com" class="footer-box">
-                        <span class="footer-box-label">Contact</span>
-                        <span class="footer-box-value">roshankumar@example.com <i class="fas fa-arrow-right"></i></span>
-                    </a>
-                    <a href="#" class="footer-box">
-                        <span class="footer-box-num">01</span>
-                        <span class="footer-box-label">Ln</span>
-                        <span class="footer-box-value">LinkedIn</span>
-                    </a>
-                    <a href="#" class="footer-box">
-                        <span class="footer-box-num">02</span>
-                        <span class="footer-box-label">Gh</span>
-                        <span class="footer-box-value">GitHub</span>
-                    </a>
-                    <a href="#" class="footer-box">
-                        <span class="footer-box-num">03</span>
-                        <span class="footer-box-label">Ig</span>
-                        <span class="footer-box-value">Instagram</span>
-                    </a>
-                </div>
+      <div class="footer-main">
+        <div class="container">
+          <p class="footer-tagline">THE BALL IS IN YOUR COURT</p>
+          <div class="footer-heading-wrap">
+            <h2 class="footer-heading">INTERESTED ?<br />LET'S TALK !</h2>
+            <div class="footer-plane">
+              <i class="fas fa-paper-plane"></i>
             </div>
+          </div>
+          <div class="footer-links-row">
+            <a href="mailto:roshanprasad9654@gmail.com" class="footer-box">
+              <span class="footer-box-label">Contact</span>
+              <span class="footer-box-value"
+                >roshanprasad9654@gmail.com <i class="fas fa-arrow-right"></i
+              ></span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/roshanr-kumar/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-box"
+            >
+              <span class="footer-box-num">01</span>
+              <span class="footer-box-label">Ln</span>
+              <span class="footer-box-value">LinkedIn</span>
+            </a>
+            <a
+              href="https://github.com/RoshanPrasadOfficial"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-box"
+            >
+              <span class="footer-box-num">02</span>
+              <span class="footer-box-label">Gh</span>
+              <span class="footer-box-value">GitHub</span>
+            </a>
+            <a
+              href="https://www.instagram.com/rrrsshhnnn._/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-box"
+            >
+              <span class="footer-box-num">03</span>
+              <span class="footer-box-label">Ig</span>
+              <span class="footer-box-value">Instagram</span>
+            </a>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <div class="container footer-bottom-inner">
-                <span>&copy; 2026 Roshan Kumar</span>
-                <span>Designed &amp; Developed with <i class="fas fa-heart"></i></span>
-            </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <span>&copy; 2026 Roshan Kumar</span>
+          <span
+            >Designed &amp; Developed with <i class="fas fa-heart"></i
+          ></span>
         </div>
+      </div>
     </footer>
 
-    <button id="back-to-top" title="Back to top"><i class="fas fa-chevron-up"></i></button>
+    <button id="back-to-top" title="Back to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
