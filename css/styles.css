@@ -403,37 +403,48 @@ body:not(.dark-mode) .journey-org {
 
 /* Mobile */
 @media (max-width: 768px) {
+    /* Hide vertical center line */
     .journey-timeline::after {
-        left: 14px;
+        display: none;
     }
 
+    /* All cards full-width, single column */
     .journey-item,
     .journey-item:nth-child(odd),
     .journey-item:nth-child(even) {
         width: 100%;
         left: 0;
-        padding-left: 36px;
-        margin-bottom: 16px;
+        padding-left: 0;
+        margin-bottom: 36px;
+        padding-top: 20px; /* room for badge above card */
+        transform-origin: top center;
     }
 
-    .journey-item:nth-child(odd) {
-        transform: perspective(800px) rotateY(-80deg);
-        transform-origin: right center;
-    }
-
+    /* Vertical flip animation (top-to-front) on mobile */
+    .journey-item:nth-child(odd),
     .journey-item:nth-child(even) {
-        transform: perspective(800px) rotateY(80deg);
-        transform-origin: left center;
+        transform: perspective(800px) rotateX(-60deg);
     }
 
+    .journey-item.animate {
+        transform: perspective(800px) rotateX(0deg) !important;
+    }
+
+    /* Badge: centered pill sitting above the card */
     .journey-badge,
     .journey-item:nth-child(odd) .journey-badge,
     .journey-item:nth-child(even) .journey-badge {
-        position: static;
-        display: inline-block;
-        transform: none;
-        margin-bottom: 8px;
-        font-size: 0.68rem;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        background: transparent;
+        border: 1.5px solid var(--bs-primary);
+        color: var(--bs-primary);
+        font-size: 0.72rem;
+        white-space: nowrap;
+        z-index: 2;
     }
 }
 
