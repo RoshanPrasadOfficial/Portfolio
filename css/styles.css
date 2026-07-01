@@ -383,7 +383,13 @@ body:not(.dark-mode) .journey-org {
 
 .journey-divider {
     margin: 10px 0;
-    border-color: rgba(var(--bs-primary-rgb), 0.2);
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(var(--bs-primary-rgb), 0.5);
+}
+
+body:not(.dark-mode) .journey-divider {
+    border-color: #b0b0c0;
 }
 
 .journey-hl-title {
