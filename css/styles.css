@@ -439,13 +439,19 @@ body:not(.dark-mode) .journey-org {
         left: 50%;
         right: auto;
         transform: translateX(-50%);
-        background: var(--bs-body-bg);
+        background: #0d0d1a;
         border: 1.5px solid var(--bs-primary);
         color: var(--bs-primary);
         opacity: 1;
         font-size: 0.72rem;
         white-space: nowrap;
         z-index: 10;
+    }
+
+    body:not(.dark-mode) .journey-badge,
+    body:not(.dark-mode) .journey-item:nth-child(odd) .journey-badge,
+    body:not(.dark-mode) .journey-item:nth-child(even) .journey-badge {
+        background: #ffffff;
     }
 }
 
