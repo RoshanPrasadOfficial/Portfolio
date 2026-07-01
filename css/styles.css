@@ -366,8 +366,9 @@ body:not(.dark-mode) .journey-card {
 }
 
 .journey-company {
-    font-size: 0.85rem;
-    color: rgba(128,128,128,0.85);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--bs-primary);
     margin-bottom: 0;
 }
 
