@@ -359,23 +359,22 @@ body:not(.dark-mode) .journey-card {
     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
 }
 
-.journey-card-header h4 {
+.journey-org {
     font-size: 1rem;
     font-weight: 700;
     margin-bottom: 4px;
-}
-
-.journey-company {
-    font-size: 0.95rem;
-    font-weight: 700;
-    font-family: 'Playfair Display', Georgia, serif;
-    font-style: italic;
     color: var(--dark-text);
-    margin-bottom: 0;
 }
 
-body:not(.dark-mode) .journey-company {
+body:not(.dark-mode) .journey-org {
     color: var(--light-text);
+}
+
+.journey-role {
+    font-size: 0.88rem;
+    font-weight: 400;
+    color: rgba(128,128,128,0.85);
+    margin-bottom: 0;
 }
 
 .journey-divider {
@@ -384,12 +383,10 @@ body:not(.dark-mode) .journey-company {
 }
 
 .journey-hl-title {
-    font-size: 0.78rem;
-    font-weight: 700;
-    color: var(--bs-primary);
+    font-size: 0.82rem;
+    font-weight: 400;
+    color: rgba(128,128,128,0.75);
     margin-bottom: 6px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
 .journey-hl {
