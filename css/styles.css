@@ -371,8 +371,9 @@ body:not(.dark-mode) .journey-org {
 }
 
 .journey-role {
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 700;
+    font-family: 'Rubik', sans-serif;
     color: rgba(128,128,128,0.85);
     margin-bottom: 0;
 }
