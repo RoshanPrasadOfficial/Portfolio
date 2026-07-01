@@ -372,7 +372,7 @@ body:not(.dark-mode) .journey-org {
 
 .journey-role {
     font-size: 0.8rem;
-    font-weight: 700;
+    font-weight: 900;
     font-family: 'Rubik', sans-serif;
     color: rgba(128,128,128,0.85);
     margin-bottom: 0;
@@ -458,8 +458,14 @@ body:not(.dark-mode) .journey-org {
     z-index: 999;
     transition: opacity 0.3s, visibility 0.3s,
                 transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
-                box-shadow 0.2s;
+                box-shadow 0.2s, background 0.3s;
     box-shadow: 0 4px 14px rgba(var(--bs-primary-rgb), 0.4);
+}
+
+body:not(.dark-mode) #back-to-top {
+    background: #1a1a2e;
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
 }
 
 #back-to-top.show {
@@ -470,6 +476,10 @@ body:not(.dark-mode) .journey-org {
 #back-to-top:hover {
     transform: translateY(-3px) scale(1.1);
     box-shadow: 0 8px 20px rgba(var(--bs-primary-rgb), 0.5);
+}
+
+body:not(.dark-mode) #back-to-top:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 /* Contact Form */
