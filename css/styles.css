@@ -439,19 +439,20 @@ body:not(.dark-mode) .journey-org {
         left: 50%;
         right: auto;
         transform: translateX(-50%);
-        background: transparent;
+        background: var(--bs-body-bg);
         border: 1.5px solid var(--bs-primary);
         color: var(--bs-primary);
+        opacity: 1;
         font-size: 0.72rem;
         white-space: nowrap;
-        z-index: 2;
+        z-index: 10;
     }
 }
 
 /* Scroll-to-top button */
 #back-to-top {
     position: fixed;
-    bottom: 28px;
+    bottom: 38px;
     right: 28px;
     width: 40px;
     height: 40px;
