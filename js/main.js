@@ -163,6 +163,15 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(item);
     });
 
+    // Scroll-to-top button
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+        backToTop.classList.toggle('show', window.scrollY > 300);
+    });
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
     // Paper plane fly-in animation — plays once per page load
     const footerPlane = document.querySelector('.footer-plane');
     const footerMain = document.querySelector('.footer-main');
