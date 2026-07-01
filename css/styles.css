@@ -366,8 +366,10 @@ body:not(.dark-mode) .journey-card {
 }
 
 .journey-company {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 700;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
     color: var(--dark-text);
     margin-bottom: 0;
 }
